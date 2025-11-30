@@ -1,0 +1,4 @@
+train: ./dataset_l/images/train
+val: ./dataset_l/images/val
+nc: 3
+names: ['paper', 'rock', 'scissors']
