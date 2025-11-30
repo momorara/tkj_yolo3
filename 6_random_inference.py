@@ -9,6 +9,7 @@ import random
 import matplotlib.pyplot as plt
 from glob import glob
 from ultralytics import YOLO
+import re
 
 # # 学習済みモデルの読み込み
 # model = load_model('cats_vs_dogs_cnn.h5')
@@ -90,10 +91,15 @@ def show_random_image(event=None):
 
     # Matplotlibで結果画像を表示
     img = plt.imread(jpg_files[0])
+    print(jpg_files[0])
     plt.imshow(img)
     plt.axis("off")
-    plt.title("YOLO 7 Category")
+    file_name = re.sub(r'\d+', '', jpg_files[0])
+    # ファイル名だけ取り出す
+    file_name = os.path.basename(file_name)
+    plt.title(file_name)
     plt.show()
+    plt.pause(0.1)  # 少し待つ
 
 def on_key(event):
     """キー入力イベント"""
