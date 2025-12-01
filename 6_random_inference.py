@@ -17,7 +17,7 @@ import re
 # 1. 学習済みモデルのパス
 # YOLOv8の学習結果は通常、'runs/detect/train' または 'runs/detect/trainX' に保存されます。
 # ここでは、学習が完了した際の最も性能が良い重みファイル (best.pt) を指定します。
-MODEL_PATH = '/Volumes/Lexar/じゃんけんデータ/runs/detect/train/weights/best.pt'
+MODEL_PATH = 'runs/detect/train/weights/best.pt'
 
 # 推論対象フォルダ（猫・犬の両方を含む上位フォルダ）
 base_dir = 'dataset_tv/images/val'
